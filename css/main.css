@@ -1,0 +1,176 @@
+p,
+hr,
+pre,
+blockquote,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+a,
+em,
+strong,
+small,
+s,
+cite,
+q,
+dfn,
+abbr,
+time,
+code,
+var,
+i,
+b,
+u,
+span,
+br,
+wbr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+}
+:root {
+  padding: 75px 120px 30px;
+  margin: 0 auto;
+  font-family: 'Hiragino Mincho ProN', serif;
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.3);
+  background: rgb(244, 244, 244);
+  -webkit-user-select: none;
+  perspective: 120;
+  perspective-origin: 30% 30%;
+  -webkit-touch-callout: none;
+}
+body {
+  opacity: 0;
+}
+body header,
+body article,
+body footer {
+  display: none;
+}
+a {
+  color: #000;
+  text-decoration: none;
+  background: rgba(255, 255, 0, 0);
+}
+a:hover {
+  color: #000;
+  background: rgb(144, 229, 255);
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.5);
+}
+header,
+article,
+footer,
+h2 {
+  padding-bottom: 30px;
+}
+h1 {
+  position: relative;
+  margin-left: -4px;
+  font-size: 36px;
+  font-weight: 100;
+  line-height: 1;
+}
+h2,
+footer,
+article p {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: rgb(171, 171, 171)
+}
+::selection {
+  color: #000;
+  background: rgba(255, 255, 0, 0.8);
+}
+.in {
+  opacity: 1;
+}
+.in header,
+.in article,
+.in footer {
+  display: block;
+}
+@keyframes spin {
+  0% {
+    transform: rotateY(-180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+@keyframes txt {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.in h1,
+.in article,
+.in footer {
+  animation: spin 1.2s 1 ease backwards;
+  transform-style: preserve-3d;
+  transform-origin: -100px 0;
+}
+.in h1 {
+  animation-delay: 0ms;
+}
+.in h2 {
+  animation: txt .4s 1 ease backwards;
+  animation-delay: 2.4s;
+}
+.in article:nth-of-type( 1) {
+  animation-delay: 80ms;
+}
+.in article:nth-of-type( 2) {
+  animation-delay: 160ms;
+}
+.in article:nth-of-type( 3) {
+  animation-delay: 240ms;
+}
+.in article:nth-of-type( 4) {
+  animation-delay: 320ms;
+}
+.in article:nth-of-type( 5) {
+  animation-delay: 400ms;
+}
+.in article:nth-of-type( 6) {
+  animation-delay: 480ms;
+}
+.in article ul {
+  list-style: none;
+  column-width: 180px;
+  column-gap: 20px;
+}
+.in footer {
+  animation-delay: 400ms;
+}
+@media screen and (max-width: 240px) {
+  :root * {
+    display: none;
+  }
+  :root:before {
+    content: "WTF?";
+    line-height: 2em;
+  }
+}
+@media (max-device-width: 480px) {
+  :root {
+    -webkit-text-size-adjust: none;
+    padding: 50px 20px;
+  }
+}
